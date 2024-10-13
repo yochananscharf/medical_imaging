@@ -29,7 +29,7 @@ if 'count' not in ss:
     model = AutoModel.from_pretrained(model_name)
     ss.model_embeddings = model
     ss.model_svm = joblib.load('svm_model_final.joblib')
-    st.experimental_rerun()
+    st.rerun()
     #img_file = None
 else:    
     img_file = sidebar.file_uploader("Upload an image (sometimes you need to upload twice!)", type=["png", "jpg", "jpeg"], key = ss.count)
@@ -50,4 +50,4 @@ else:
 
         ss.count += 1
         sleep(5)
-        st.experimental_rerun()
+        st.rerun()
