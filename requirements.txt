@@ -3,3 +3,4 @@ Pillow
 transformers
 joblib
 torch
+scikit-learn
